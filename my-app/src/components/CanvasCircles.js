@@ -8,8 +8,8 @@ function CanvasCirtles() {
     ctx1.arc( window.screen.availWidth / 2, window.screen.availHeight / 2, 150, 0, 2 * Math.PI );
     ctx1.stroke();
 
-    let r1 = 150; // радиус
-    let amountOfPoints1 = 10; // количество точек
+    const r1 = 150; // радиус
+    const amountOfPoints1 = 10; // количество точек
     let x1, y1;
     for(let i = 0; i < Math.PI * 2; i += Math.PI * 2 / amountOfPoints1){
         ctx1.beginPath();
@@ -17,6 +17,10 @@ function CanvasCirtles() {
         y1 = window.screen.availHeight / 2 + r1 * Math.cos(i);
         ctx1.arc(x1, y1, 10, 0, 2 * Math.PI);
         ctx1.stroke();
+
+        ctx1.fillText('text', x1 + 50 * Math.sin(i), y1 + 50 * Math.cos(i));
+        ctx1.font = 'bold 12px sans-serif';
+
         ctx1.closePath();
     }
 
@@ -25,8 +29,8 @@ function CanvasCirtles() {
     ctx2.arc( window.screen.availWidth / 2, window.screen.availHeight / 2, 300, 2 * Math.PI, 0 );
     ctx2.stroke();
 
-    let r2 = 300; // радиус
-    let amountOfPoints2 = 29; // количество точек
+    const r2 = 300; // радиус
+    const amountOfPoints2 = 29; // количество точек
     let x2, y2;
     for(let i = 0; i < Math.PI * 2; i += Math.PI * 2 / amountOfPoints2){
         ctx1.beginPath();
